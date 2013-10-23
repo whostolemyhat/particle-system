@@ -1,6 +1,6 @@
 var ctx;
 var canvas;
-
+var time;
 
 // RAF shim
 window.requestAnimFrame = (function(){
@@ -25,9 +25,6 @@ function init() {
         particleSystem.createExplosion(mousePos.x, mousePos.y, colour);
     }, false);
     
-
-    var time;
-
     (function animloop(){
         requestAnimFrame(animloop);
         var now = new Date().getTime();
@@ -35,7 +32,6 @@ function init() {
         time = now;
         particleSystem.update(dt);
     })();
-
 }
 
 // should be in onload event
