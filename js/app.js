@@ -34,5 +34,5 @@ function init() {
     })();
 }
 
-// should be in onload event
-init();
+window.onload = init;
+// init();
