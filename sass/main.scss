@@ -1,5 +1,15 @@
 @import "_normalise";
 
+@mixin no-selection {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+
+  /* No support for these yet, use at own risk */
+  -o-user-select: none;
+  user-select: none;          
+}
+
 *{
     box-sizing: border-box;
 }
@@ -18,6 +28,8 @@ canvas {
 }
 
 h1 {
+    @include no-selection;
     z-index: 10;
     position: absolute; /* otherwise scrollbars appear D: */
 }
+
