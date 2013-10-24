@@ -16,6 +16,10 @@ window.requestAnimFrame = (function(){
 function init() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
+
+    ctx.canvas.width = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
+
     var mousePos = {x: canvas.width / 2, y: canvas.height / 2 }; // default pos = centre of canvas
     var colour = '#52ef1d';
     var particleSystem = new ParticleSystem(ctx);

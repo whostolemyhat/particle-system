@@ -1,6 +1,23 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "_normalise";
 
-@import "compass/reset";
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+}
+
+h1 {
+    z-index: 10;
+    position: absolute; /* otherwise scrollbars appear D: */
+}
