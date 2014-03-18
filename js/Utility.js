@@ -33,8 +33,8 @@ var Utility = {
     getMouseClick: function(canvas, event) {
         var rect = canvas.getBoundingClientRect();
         return {
-            x: event.clientX - rect.top,
-            y: event.clientY - rect.left
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top
         };
     }
 };
